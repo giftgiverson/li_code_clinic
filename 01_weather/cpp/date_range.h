@@ -18,9 +18,7 @@ public:
     time_t get_end() const {return _end;}
 };
 
-std::ostream& operator<<(std::ostream &output, DateRange &dr) {
-    return dr.dump(output);
-}
+std::ostream& operator<<(std::ostream &output, DateRange &dr);
 
 std::istream& operator>>(std::istream &input, DateRange &dr);
 

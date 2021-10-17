@@ -12,6 +12,10 @@ std::ostream& DateRange::dump(std::ostream& output) {
     return output << "Range [" << _start << " - " << _end << "]";
 }
 
+std::ostream& operator<<(std::ostream &output, DateRange &dr) {
+    return dr.dump(output);
+}
+
 time_t verbose_read_time_t_from_istream(std::istream &input) {
     struct tm tm_time;
     std::cout << "\tYear: "; std::cin >> tm_time.tm_year; tm_time.tm_year -= 1900;
